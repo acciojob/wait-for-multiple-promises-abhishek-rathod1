@@ -2,7 +2,6 @@
 const tableBody = document.getElementById("output");
 tableBody.innerHTML = `
 <tr id="loading"><td colspan="2">Loading...</td></tr>
-
 `
 
 function promise1() {
