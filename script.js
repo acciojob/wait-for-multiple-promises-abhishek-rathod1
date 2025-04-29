@@ -1,9 +1,9 @@
 //your JS code here. If required.
 const tableBody = document.getElementById("output");
 tableBody.innerHTML = `
-<tr><td colspan="2">Loading...</td></tr>
-<tr><td colspan="2">Loading...</td></tr>
-<tr><td colspan="2">Loading...</td></tr>
+<tr id="loading"><td colspan="2">Loading...</td></tr>
+<tr id="loading"><td colspan="2">Loading...</td></tr>
+<tr id="loading"><td colspan="2">Loading...</td></tr>
 `
 
 function promise1() {
@@ -41,7 +41,7 @@ Promise.all([promise1(), promise2(), promise3()]).then((data)=>{
 	<tr><td>Promise 1</td><td>${data[0].toFixed(0)}</td></tr>
 <tr><td>Promise 2</td><td>${data[1].toFixed(0)}</td></tr>
 <tr><td>Promise 3</td><td>${data[2].toFixed(0)}</td></tr>
-<tr><td><b>Total</b></td><td>${(data[0]+data[1]+data[2]).toFixed(3)}</td></tr>
+<tr><td><b>Total</b></td><td>${Math.max(...data).toFixed(3)}</td></tr>
 `
 	console.log(data);
 }).catch((e)=>{
