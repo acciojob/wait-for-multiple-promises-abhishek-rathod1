@@ -2,8 +2,7 @@
 const tableBody = document.getElementById("output");
 tableBody.innerHTML = `
 <tr id="loading"><td colspan="2">Loading...</td></tr>
-// <tr id="loading"><td colspan="2">Loading...</td></tr>
-// <tr id="loading"><td colspan="2">Loading...</td></tr>
+
 `
 
 function promise1() {
@@ -49,4 +48,4 @@ Promise.all([promise1(), promise2(), promise3()]).then((data)=>{
 })
 
 
-// ddddddfffsdsss
+// ddddddfffsdsssff
